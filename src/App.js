@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import Mounting from './Mounting';
+import UnMounting from './UnMounting';
+import Updating from './Updateing';
+import Updateing2 from './Updateing2';
+import {Container, Row, Col} from 'reactstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  render () {
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Col>
+              <Mounting favcol="Yollow" />
+            </Col>
+            <Col>
+              <Updating />
+            </Col>
+
+            <Col>
+              <Updateing2 />
+            </Col>
+
+            <Col>
+              <UnMounting />
+
+            </Col>
+
+          </Row>
+
+        </Container>
+      </div>
+    );
+  }
 }
-
-export default App;
